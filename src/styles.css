@@ -30,7 +30,7 @@ body {
   font-size: 40px;
 }
 
-.intro img {
+img {
   display: block;
   max-width: 100%;
   height: auto;
