@@ -1,8 +1,5 @@
 import gallery_list from '../templates/gallery_list.hbs';
-
-const refs = {
-  articlesContainer: document.querySelector('.js-articles'),
-};
+import refs from './refs';
 
 function renderMurkup(pics) {
   const markup = gallery_list(pics);

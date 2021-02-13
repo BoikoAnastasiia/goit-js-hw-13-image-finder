@@ -1,19 +1,18 @@
 import '../styles.css';
 
-const myKey = 'fb416686c0cf4be5b520956836ebc075';
+const myKey = '3533171-8055817a9c2a16331b7f6fbf1';
 
 export default {
   searchQuerry: '',
   page: 1,
   fetchArticles() {
-    const url = `https://newsapi.org/v2/everything?q=${this.searchQuerry}&language=en&page=${this.page}&pageSize=4&apiKey=${myKey}`;
-
+    const url = `https://pixabay.com/api/?image_type=photo&orientation=horizontal&q=${searchQuery}&page=${page}&per_page=12&key=${myKey}`;
     const options = { headers: { Authorization: myKey } };
     return fetch(url, options)
       .then(res => res.json())
-      .then(({ articles }) => {
+      .then(({ pics }) => {
         this.page++;
-        return articles;
+        return pics;
       })
       .catch(error => console.log(error));
   },
