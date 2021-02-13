@@ -1,15 +1,17 @@
 import './styles.css';
-import newsService from './js/apiService';
+import apiService from './js/apiService';
 import renderMurkup from './js/updateMarkup';
+import spiner from './js/spinner';
+import refs from './js/refs';
 
 refs.searchForm.addEventListener('submit', event => {
   event.preventDefault();
   const form = event.currentTarget;
-  newsService.query = form.elements.query.value;
+  apiService.query = form.elements.query.value;
 
-  refs.articlesContainer.innerHTML = '';
+  galleryContainer.innerHTML = '';
 
-  newsService.resetPage();
+  apiService.resetPage();
   fetchPics();
   form.reset();
 });
@@ -18,11 +20,11 @@ refs.loadMoreBtn.addEventListener('click', fetchPics);
 
 function fetchPics() {
   refs.loadMoreBtn.classList.add('is-hidden');
-  refs.spin.classList.remove('sr-only');
-  newsService
+  refs.spin.classList.remove('is-hidden');
+  apiService
     .fetchPics()
-    .then(articles => {
-      renderMurkup(articles);
+    .then(pics => {
+      renderMurkup(pics);
       refs.loadMoreBtn.classList.remove('is-hidden');
 
       window.scrollTo({
@@ -31,5 +33,5 @@ function fetchPics() {
         behavior: 'smooth',
       });
     })
-    .finally(() => refs.spin.classList.add('sr-only'));
+    .finally(() => refs.spin.classList.add('is-hidden'));
 }

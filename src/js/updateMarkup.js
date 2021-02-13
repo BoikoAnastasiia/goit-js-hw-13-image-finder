@@ -3,7 +3,7 @@ import refs from './refs';
 
 function renderMurkup(pics) {
   const markup = gallery_list(pics);
-  refs.articlesContainer.insertAdjacentHTML('beforeend', markup);
+  refs.galleryContainer.insertAdjacentHTML('beforeend', markup);
 }
 
 export default renderMurkup;

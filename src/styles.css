@@ -97,3 +97,12 @@ ul {
 .gallery {
   display: flex;
 }
+
+.is-hidden {
+  display: none;
+}
+
+.loadMoreBtn {
+  margin-left: auto;
+  margin-right: auto;
+}
