@@ -1,5 +1,5 @@
 import './styles.css';
-import newsService from './js/news_service';
+import newsService from './js/apiService';
 import renderMurkup from './js/updateMarkup';
 
 refs.searchForm.addEventListener('submit', event => {
