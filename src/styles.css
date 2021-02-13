@@ -15,11 +15,9 @@ body {
 
   min-height: 100vh;
 
-  width: 1200px;
   margin-right: auto;
   margin-left: auto;
-  padding-left: 55px;
-  padding-right: 55px;
+
   background-color: darkgrey;
 }
 
@@ -36,7 +34,6 @@ h1::before {
   content: '';
   display: block;
   background-image: url(./images/logo_pixabay.svg);
-
   background-repeat: no-repeat;
   background-position: center;
   background-color: #f5f4fa;
