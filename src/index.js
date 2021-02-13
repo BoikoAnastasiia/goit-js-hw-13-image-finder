@@ -7,9 +7,10 @@ import refs from './js/refs';
 refs.searchForm.addEventListener('submit', event => {
   event.preventDefault();
   const form = event.currentTarget;
+
   apiService.query = form.elements.query.value;
 
-  galleryContainer.innerHTML = '';
+  refs.galleryContainer.innerHTML = '';
 
   apiService.resetPage();
   fetchPics();
