@@ -7,8 +7,9 @@ export default {
   page: 1,
 
   fetchPics() {
-    const url = `https://pixabay.com/api/?image_type=photo&orientation=horizontal&q=${searchQuery}&page=${page}&per_page=12&key=${myKey}`;
+    const url = `https://pixabay.com/api/?image_type=photo&orientation=horizontal&q=${this.searchQuery}&page=${this.page}&per_page=12&key=${myKey}`;
     const options = { headers: { Authorization: myKey } };
+
     return fetch(url, options)
       .then(res => res.json())
       .then(({ pics }) => {
