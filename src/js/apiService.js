@@ -7,14 +7,14 @@ export default {
   page: 1,
 
   fetchPics() {
-    const url = `https://pixabay.com/api/?key=${myKey}&image_type=photo&orientation=horizontal&q=${this.searchQuery}&page=${this.page}&per_page=12`;
+    const url = `https://pixabay.com/api/?key=${myKey}&image_type=photo&orientation=horizontal&q=${this.searchQuerry}&page=${this.page}&per_page=12`;
 
     return fetch(url)
       .then(res => res.json())
       .catch(console.log)
-      .then(({ pics }) => {
+      .then(({ hits }) => {
         this.page++;
-        return pics;
+        return hits;
       })
       .catch(error => console.log(error));
   },

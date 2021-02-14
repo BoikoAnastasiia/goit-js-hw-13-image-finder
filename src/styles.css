@@ -94,8 +94,25 @@ ul {
   border-radius: 4px;
 }
 
+.gallery-container {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .gallery {
   display: flex;
+  width: 1200px;
+  margin-left: -20px;
+  margin-top: -20px;
+}
+
+.gallery-list {
+  flex-basis: calc(100% / 3 - 20px);
+  margin-left: 20px;
+  margin-top: 20px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .is-hidden {
@@ -105,4 +122,25 @@ ul {
 .loadMoreBtn {
   margin-left: auto;
   margin-right: auto;
+}
+
+.pic {
+  max-height: 300px;
+  width: auto;
+}
+
+.photo-card {
+  position: relative;
+}
+
+.stats {
+  position: absolute;
+  top: 120px;
+  left: 120px;
+  z-index: 1;
+}
+
+.material-icons,
+.stats-item {
+  color: white;
 }
