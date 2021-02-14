@@ -106,14 +106,13 @@ ul {
   display: flex;
   margin-left: -20px;
   margin-top: -20px;
+  flex-wrap: wrap;
 }
 
 .gallery-list {
   flex-basis: calc(100% / 3 - 20px);
   margin-left: 20px;
   margin-top: 20px;
-
-  flex-wrap: wrap;
 }
 
 .is-hidden {
