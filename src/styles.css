@@ -165,3 +165,7 @@ ul {
   display: inline-block;
   margin-right: 10px;
 }
+
+.spinner .is-hidden {
+  display: none;
+}

@@ -23,3 +23,5 @@ var opts = {
 };
 
 var spinner = new Spinner(opts).spin(refs.spin);
+
+export default spinner;

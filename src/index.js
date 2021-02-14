@@ -19,10 +19,18 @@ refs.searchForm.addEventListener('submit', event => {
   form.reset();
 });
 
-refs.loadMoreBtn.addEventListener('click', fetchPics);
+const observer = new IntersectionObserver(entries => {
+  if (!entries.some(entry => entry.intersectionRatio > 0)) {
+    return;
+  }
+  fetchPics();
+});
+
+observer.observe(refs.sentinel);
+// refs.loadMoreBtn.addEventListener('click', fetchPics);
 
 function fetchPics() {
-  refs.loadMoreBtn.classList.add('is-hidden');
+  // refs.loadMoreBtn.classList.add('is-hidden');
   refs.spin.classList.remove('is-hidden');
   apiService
     .fetchPics()
@@ -32,7 +40,6 @@ function fetchPics() {
 
       window.scrollTo({
         top: 1000000000,
-
         behavior: 'smooth',
       });
     })
