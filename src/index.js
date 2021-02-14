@@ -8,7 +8,9 @@ refs.searchForm.addEventListener('submit', event => {
   event.preventDefault();
   const form = event.currentTarget;
 
-  apiService.query = form.elements.query.value;
+  apiService.searchQuerry = form.elements.query.value;
+
+  console.log(apiService.searchQuerry);
 
   refs.galleryContainer.innerHTML = '';
 
