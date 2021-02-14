@@ -148,9 +148,12 @@ ul {
   text-shadow: 0px 0px 7px rgba(0, 0, 0, 0.55);
 }
 
-.stats:hover {
+.photo-card:hover > .stats {
   opacity: 100%;
-  /* display: block; */
+}
+
+.stats-item:hover {
+  color: greenyellow;
 }
 
 .material-icons,
