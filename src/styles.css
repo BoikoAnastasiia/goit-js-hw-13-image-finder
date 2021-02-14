@@ -97,6 +97,9 @@ ul {
 .gallery-container {
   margin-left: auto;
   margin-right: auto;
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .gallery {
@@ -107,7 +110,7 @@ ul {
 }
 
 .gallery-list {
-  flex-basis: calc(100% / 3 - 20px);
+  flex-basis: calc(100% / 3 - 60px);
   margin-left: 20px;
   margin-top: 20px;
   justify-content: center;
@@ -127,16 +130,13 @@ ul {
 .pic {
   max-height: 300px;
   width: auto;
-}
-
-.photo-card {
   position: relative;
 }
 
 .stats {
   position: absolute;
   top: 120px;
-  left: 120px;
+  left: 10px;
   z-index: 1;
 }
 
