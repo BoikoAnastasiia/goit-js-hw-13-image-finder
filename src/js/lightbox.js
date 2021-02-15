@@ -3,20 +3,17 @@ import 'basicLightbox/src/styles/main.scss';
 import refs from './refs';
 
 const lightBox = () => {
-  
   refs.galleryContainer.addEventListener('click', event => {
     const target = event.target;
     // console.log(target);
     // console.log(refs.pic);
-      if (target === refs.pic)
-      {
+    if (target === refs.pic) {
+      basicLightbox.create(`
+    <img src="assets/images/image.png" width="1280" height="854">
+`);
       lightBox.show();
     }
   });
-    
-    basicLightbox.create(
-    	"<img width="1400" height="900" src=`${refs.lightBox.getAttribute}`">
-	  );
 };
 
 export default lightBox;
