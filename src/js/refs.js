@@ -3,6 +3,7 @@ const refs = {
   searchForm: document.querySelector('.js-search-form'),
   spin: document.querySelector('.spinner'),
   lightBox: document.querySelector('a[open-modal]'),
+  pic: document.querySelector('.pic'),
 };
 
 export default refs;

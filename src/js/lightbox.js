@@ -8,11 +8,14 @@ const lightBox = () => {
 		<img width="1400" height="900" src="https://placehold.it/1400x900">
 	`,
   );
-};
 
-refs.galleryContainer.addEventListener('click', event => {
-  const target = event.target;
-  target.addEventListener('click', lightBox.show());
-});
+  refs.galleryContainer.addEventListener('click', event => {
+    const target = event.target;
+    console.log(target);
+    if (target === refs.pic) {
+      lightBox.show();
+    }
+  });
+};
 
 export default lightBox;
