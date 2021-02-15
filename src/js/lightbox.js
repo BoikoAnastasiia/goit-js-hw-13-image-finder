@@ -4,7 +4,7 @@ import refs from './refs';
 
 const lightBox = () => {
   refs.galleryContainer.addEventListener('click', () => {
-    if (img.nodeName == 'IMG') {
+    if (ref.pic.nodeName !== 'IMG') {
       return;
     }
 
