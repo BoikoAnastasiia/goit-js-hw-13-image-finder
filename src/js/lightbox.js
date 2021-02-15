@@ -7,7 +7,9 @@ const lightBox = () => {
     const target = event.target;
     // console.log(target);
     // console.log(refs.pic);
-    if (target === refs.pic) {
+    if (img.nodeName !== 'IMG') {
+        return
+        {
       basicLightbox.create(`
     <img src="assets/images/image.png" width="1280" height="854">
 `);
