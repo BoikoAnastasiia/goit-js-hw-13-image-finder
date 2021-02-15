@@ -1,8 +1,8 @@
 import './styles.css';
 import apiService from './js/apiService';
 import renderMurkup from './js/updateMarkup';
-import spiner from './js/spinner';
 import refs from './js/refs';
+import infinityScroll from './js/scroll';
 
 refs.searchForm.addEventListener('submit', event => {
   event.preventDefault();
@@ -10,38 +10,22 @@ refs.searchForm.addEventListener('submit', event => {
 
   apiService.searchQuerry = form.elements.query.value;
 
-  console.log(apiService.searchQuerry);
-
   refs.galleryContainer.innerHTML = '';
-
   apiService.resetPage();
   fetchPics();
   form.reset();
 });
 
-const observer = new IntersectionObserver(entries => {
-  if (!entries.some(entry => entry.intersectionRatio > 0)) {
-    return;
-  }
-  fetchPics();
-});
-
-observer.observe(refs.sentinel);
-// refs.loadMoreBtn.addEventListener('click', fetchPics);
+infinityScroll();
 
 function fetchPics() {
-  // refs.loadMoreBtn.classList.add('is-hidden');
   refs.spin.classList.remove('is-hidden');
   apiService
     .fetchPics()
     .then(pics => {
       renderMurkup(pics);
-      refs.loadMoreBtn.classList.remove('is-hidden');
-
-      window.scrollTo({
-        top: 1000000000,
-        behavior: 'smooth',
-      });
     })
     .finally(() => refs.spin.classList.add('is-hidden'));
 }
+
+export default fetchPics;

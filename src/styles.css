@@ -104,7 +104,7 @@ ul {
 .gallery {
   display: flex;
   margin-left: -20px;
-  margin-top: -20px;
+  /* margin-top: -20px; */
   flex-wrap: wrap;
 }
 
@@ -169,3 +169,7 @@ ul {
 .spinner .is-hidden {
   display: none;
 }
+
+/* .photo-card {
+  margin-top: 30px;
+} */
