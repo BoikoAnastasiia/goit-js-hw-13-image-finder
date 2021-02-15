@@ -8,7 +8,7 @@ const lightBox = () => {
       return;
     }
 
-    basicLightbox.create(`${IMG.dataset.source}`);
+    basicLightbox.create(`${ref.pic.dataset.source}`);
     lightBox.show();
   });
 };
