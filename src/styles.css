@@ -2,6 +2,9 @@
 html {
   box-sizing: border-box;
 }
+:root {
+  --basiclightbox__background: rgba(85, 107, 47, 0.8);
+}
 
 *,
 *::before,
@@ -154,6 +157,7 @@ ul {
 
 .photo-card:hover {
   box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.55);
+  color: rgb(85, 107, 47);
 }
 
 .stats-item:hover {

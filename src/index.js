@@ -3,6 +3,7 @@ import apiService from './js/apiService';
 import renderMurkup from './js/updateMarkup';
 import refs from './js/refs';
 import infinityScroll from './js/scroll';
+import lightbox from './js/lightbox';
 
 refs.searchForm.addEventListener('submit', event => {
   event.preventDefault();
