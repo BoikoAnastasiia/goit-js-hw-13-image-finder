@@ -1,10 +1,16 @@
 import * as basicLightbox from 'basiclightbox';
+import 'basicLightbox/src/styles/main.scss';
 import refs from './refs';
 
-const instance = basicLightbox.create(`
-    <img src="assets/images/image.png" width="800" height="600">
-`);
-
-const modalPicShow = () => {
-  refs.modalContainer.addEventListener('click', instance.show());
+const lighBox = () => {
+  refs.lightBox.addEventListener('click', () => {
+    basicLightbox
+      .create(
+        `
+		<img width="1400" height="900" src="https://placehold.it/1400x900">
+	`,
+      )
+      .show();
+  });
 };
+export default lighBox;

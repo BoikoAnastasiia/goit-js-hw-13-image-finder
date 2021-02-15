@@ -14,6 +14,7 @@ refs.searchForm.addEventListener('submit', event => {
   refs.galleryContainer.innerHTML = '';
   apiService.resetPage();
   fetchPics();
+
   form.reset();
 });
 
