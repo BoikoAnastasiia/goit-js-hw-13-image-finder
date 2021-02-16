@@ -30,4 +30,7 @@ function fetchPics() {
     .finally(() => refs.spin().classList.add('is-hidden'));
 }
 
+//todo notification
+// what was the search
+
 export default fetchPics;
