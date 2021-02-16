@@ -1,7 +1,7 @@
 import { Spinner } from 'spin.js';
 import refs from './refs';
 
-var opts = {
+const opts = {
   lines: 13, // The number of lines to draw
   length: 38, // The length of each line
   width: 7, // The line thickness
@@ -22,6 +22,6 @@ var opts = {
   position: 'absolute', // Element positioning
 };
 
-var spinner = new Spinner(opts).spin(refs.spin);
+const spinner = new Spinner(opts).spin(refs.spin());
 
 export default spinner;

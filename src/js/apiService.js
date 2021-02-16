@@ -3,11 +3,11 @@ import '../styles.css';
 const myKey = '3533171-8055817a9c2a16331b7f6fbf1';
 
 export default {
-  searchQuerry: '',
+  searchQuery: '',
   page: 1,
 
   fetchPics() {
-    const url = `https://pixabay.com/api/?key=${myKey}&image_type=photo&orientation=horizontal&q=${this.searchQuerry}&page=${this.page}&per_page=12`;
+    const url = `https://pixabay.com/api/?key=${myKey}&image_type=photo&orientation=horizontal&q=${this.searchQuery}&page=${this.page}&per_page=12`;
 
     return fetch(url)
       .then(res => res.json())

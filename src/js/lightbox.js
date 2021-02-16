@@ -3,13 +3,18 @@ import 'basicLightbox/src/styles/main.scss';
 import refs from './refs';
 
 const lightBox = () => {
-  refs.galleryContainer.addEventListener('click', () => {
-    if (refs.pic.nodeName !== 'IMG') {
+  refs.galleryContainer().addEventListener('click', () => {
+    if (refs.pic().nodeName !== 'IMG') {
       return;
     }
-
-    basicLightbox.create(`${refs.pic.dataset.source}`);
-    lightBox.show();
+    const pic = refs.pic();
+    const { source } = pic.dataset;
+    console.log('c');
+    const { alt } = pic;
+    const instance = basicLightbox.create(
+      `<img src = "${source}" alt ="${alt}">`,
+    );
+    instance.show();
   });
 };
 

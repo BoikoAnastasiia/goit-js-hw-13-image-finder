@@ -3,7 +3,7 @@ html {
   box-sizing: border-box;
 }
 :root {
-  --basiclightbox__background: rgba(85, 107, 47, 0.8);
+  --basiclightbox__background: rgba(164, 211, 84, 0.8);
 }
 
 *,
