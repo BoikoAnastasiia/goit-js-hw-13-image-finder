@@ -7,7 +7,7 @@ const lightBox = () => {
     if (refs.pic().nodeName !== 'IMG') {
       return;
     }
-    const pic = refs.pic();
+    const pic = event.target;
     const { source } = pic.dataset;
     console.log('c');
     const { alt } = pic;
