@@ -1,7 +1,6 @@
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
-const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 
 module.exports = env => ({
   devtool: 'source-map',
@@ -55,11 +54,6 @@ module.exports = env => ({
       chunkFilename: '[name].[id].[contenthash].css',
     }),
     new OptimizeCssAssetsPlugin({}),
-    new CopyWebpackPlugin({
-      patterns: [
-        // relative path is from src
-        { from: './images/logo.png' }, // <- your path to favicon
-      ],
-    }),
+    
   ],
 });
