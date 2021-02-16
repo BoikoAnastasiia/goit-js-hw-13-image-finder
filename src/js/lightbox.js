@@ -4,11 +4,11 @@ import refs from './refs';
 
 const lightBox = () => {
   refs.galleryContainer.addEventListener('click', () => {
-    if (ref.pic.nodeName !== 'IMG') {
+    if (refs.pic.nodeName !== 'IMG') {
       return;
     }
 
-    basicLightbox.create(`${ref.pic.dataset.source}`);
+    basicLightbox.create(`${refs.pic.dataset.source}`);
     lightBox.show();
   });
 };
