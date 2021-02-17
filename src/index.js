@@ -14,6 +14,7 @@ refs.searchForm().addEventListener('submit', event => {
   refs.galleryContainer().innerHTML = '';
   apiService.resetPage();
   fetchPics();
+  savedSearchText();
   lightBox();
   form.reset();
 });
@@ -30,7 +31,10 @@ function fetchPics() {
     .finally(() => refs.spin().classList.add('is-hidden'));
 }
 
-//todo notification
-// what was the search
-
+const savedSearchText = () => {
+  refs.savedSearch().classList.remove('is-hidden');
+  const form = event.currentTarget;
+  refs.message().textContent = form.elements.query.value;
+};
+console.log(refs.message());
 export default fetchPics;
