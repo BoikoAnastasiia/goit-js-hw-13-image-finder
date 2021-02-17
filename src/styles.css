@@ -75,7 +75,7 @@ ul {
   font-size: 15px;
   letter-spacing: 0;
   color: #082f4dab;
-  padding-left: 15px;
+  padding-bottom: 10px;
 }
 
 .form-control {
@@ -95,7 +95,7 @@ ul {
   box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
   margin-bottom: 30px;
   border-radius: 4px;
-  position: relative;
+  padding-left: 60px;
 }
 
 .gallery-container {
@@ -183,11 +183,15 @@ ul {
   display: none;
 }
 
-.body > article.intro > form > div > i {
+.form-group {
+  position: relative;
+}
+
+.search-icon {
   position: absolute;
-  color: #082f4dab;
-  top: 30px;
-  right: 100px;
+  color: #082f4d8a;
+  top: 20px;
+  right: 210px;
 }
 
 .notification {
@@ -195,4 +199,9 @@ ul {
   font-weight: 700;
   font-size: 16px;
   text-align: center;
+}
+
+#js-search-notification {
+  text-decoration: underline;
+  text-underline-position: under;
 }

@@ -36,5 +36,5 @@ const savedSearchText = () => {
   const form = event.currentTarget;
   refs.message().textContent = form.elements.query.value;
 };
-console.log(refs.message());
+
 export default fetchPics;
