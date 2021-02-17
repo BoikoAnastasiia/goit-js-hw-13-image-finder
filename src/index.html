@@ -8,7 +8,7 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
-    <link rel="icon" href="./images/favicon.ico" sizes="32x32" />
+    <link rel="icon" href="./images/logo-1.png" type="image/png" />
 
     <title>Image Finder</title>
   </head>
@@ -17,20 +17,25 @@
     <nav><h1>Image FINDER</h1></nav>
     <article class="intro">
       <form class="search-form js-search-form">
-        <div class="form-group mx-sm-3 mb-2">
+        <div class="form-group">
           <label for="searchQuery"></label>
+
           <input
             type="text"
             class="form-control"
             name="query"
             id="searchQuery"
-            placeholder="Search images..."
+            placeholder=" Search images..."
             autocomplete="off"
           />
+          <i class="material-icons search-icon">search</i>
         </div>
       </form>
     </article>
     <article class="sentinel">
+      <p class="is-hidden notification">
+        Results for <span id="js-search-notification"></span>
+      </p>
       <div class="gallery-container"></div>
     </article>
 

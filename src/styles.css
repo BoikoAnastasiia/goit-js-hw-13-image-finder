@@ -74,10 +74,11 @@ ul {
 .form-control::placeholder {
   font-size: 15px;
   letter-spacing: 0;
+  color: #082f4dab;
+  padding-left: 15px;
 }
 
 .form-control {
-  text-align: center;
   font-family: 'Quicksand', sans-serif;
   background: rgba(134, 25, 25, 0.1);
   border: none;
@@ -94,6 +95,7 @@ ul {
   box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
   margin-bottom: 30px;
   border-radius: 4px;
+  position: relative;
 }
 
 .gallery-container {
@@ -107,7 +109,6 @@ ul {
 .gallery {
   display: flex;
   margin-left: -20px;
-
   flex-wrap: wrap;
 }
 
@@ -182,6 +183,9 @@ ul {
   display: none;
 }
 
-/* .photo-card {
-  margin-top: 30px;
-} */
+.body > article.intro > form > div > i {
+  position: absolute;
+  color: #082f4dab;
+  top: 30px;
+  right: 100px;
+}
